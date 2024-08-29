@@ -1,0 +1,107 @@
+.reviews {
+  padding: 8rem 0;
+  grid-column: col-start 1 / col-end 8;
+  
+
+  display: grid;
+  grid-column-gap: 6rem;
+  grid-row-gap: 4rem;
+  grid-template-rows: repeat(2, min-content);
+  grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 70%;
+    justify-content: center;
+  }
+  
+  @media only screen and (max-width: $bp-small-2) {
+    grid-template-columns: none;
+  }
+
+
+  &__heading { grid-column: 1 / -1; text-align: center;}
+}
+
+.review {
+  padding: 2.5rem 3rem;
+  box-shadow: 0 1.2rem 1.8rem rgba($color-grey-light-1, .8);
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-gap: 1.3rem;
+  position: relative;
+  overflow: hidden;
+  transition: all .3s;
+
+  &__quote {
+    position: absolute;
+    font-size: 20rem;
+    font-family: $font-primary;
+    top: -2.75rem;
+    left: -.8rem;
+    line-height: 1;
+    z-index: -10;
+    color: $color-grey-light-1;
+  }
+
+  &__text {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.9rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: min-content minmax(max-content, 1fr) min-content;
+    grid-gap: 1.2rem;
+    align-items: center;
+  }
+
+  &__img {
+    width: 5rem;
+    border-radius: 50%;
+    display: block;
+    @media only screen and (max-width: $bp-medium) {
+      width: 8rem;
+    }
+  }
+
+  &__rating {
+    font-size: 2rem;
+    color: $color-tertiary-dark;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.8rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__role {
+    font-size: 1.2rem;
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.6rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2rem;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-.7rem);
+  }
+}

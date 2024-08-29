@@ -1,0 +1,50 @@
+.about {
+  grid-column: center-start / center-end;
+
+  padding: 8rem 6rem 4rem;
+  display: grid;
+
+  grid-row-gap: 4rem;
+  grid-column-gap: 8rem;
+  grid-template-columns: repeat(2, minmax(12rem, 1fr));
+  grid-template-rows: repeat(3, min-content) 30vw;
+  justify-items: center;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: auto;
+    grid-template-columns: none;
+    padding: 8rem 2rem 4rem;
+  }
+
+  &__heading {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.6rem;
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 2.3rem;
+    }
+  }
+  
+  &__video {
+    grid-column: 1 / -1;
+    width: 100%;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 20%;
+    }
+    /*
+      since justify-items was set to center, the width of &__video will be determined by the content.
+      setting video to 100% width will try to maintain aspect ratio if the parent width is not set.
+      the height set to 100% inherits from the grid-row-template. 
+      If the height wasn't set, the video will extend past the parent to keep aspect ratio.
+      If the height is then set to 100%, in order to keep aspect ratio, the video width is reduced that's why the OBJECT-FIT: COVER  was set to force video to 100% width and still keep it's aspect ratio.
+    */
+  }
+
+}

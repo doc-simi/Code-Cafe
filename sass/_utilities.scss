@@ -1,0 +1,64 @@
+.tc {
+  &-tertiary {color: $color-tertiary-dark;}
+}
+
+
+.mb-xs {margin-bottom: .4rem;}
+.mb-sm {margin-bottom: .8rem;}
+.mb-md {margin-bottom: 1.2rem;}
+.mb-lg {margin-bottom: 1.6rem;}
+.mb-xl {margin-bottom: 2rem;}
+
+@keyframes pinchZoom {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes reverse-pinchZoom {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+
+  60% {
+
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes heading__1 {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes heading__3 {
+  0% {
+    opacity: 0;
+    letter-spacing: .6rem;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: normal;
+  }
+}
+

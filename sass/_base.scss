@@ -1,0 +1,71 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% --> 1rem = 10px
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%; // 1rem --> 8px
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 43.75%; // 1rem --> 7px
+  }
+
+  @media only screen and (max-width: $bp-medium-2) {
+    font-size: 37.5%; // 1rem --> 6px
+  }
+
+  @media only screen and (min-width: $bp-xlarge) {
+    font-size: 87.5%; // 1rem --> 6px
+  }
+
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-dark;
+  font-weight: 400;
+  line-height: 1.6;
+
+}
+
+.container {
+  display: grid;
+
+  grid-template-rows: 100svh repeat(3, min-content) 35vw repeat(5, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-medium-2) {
+    grid-template-rows: 100svh repeat(3, min-content) 45vw repeat(5, min-content);
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: 100svh repeat(9, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 12rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+
+  /*
+    Average screen size is 1500px
+    So we can divide 1300px in 8 fixed columns, approx 160px each
+
+  */
+}

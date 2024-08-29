@@ -1,0 +1,136 @@
+.contact {
+
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: repeat(2, min-content);
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: none;
+  }
+  
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .4s;
+    
+    &:hover {
+      transform: scale(1.4) translateY(-6rem);
+    }
+  }
+}
+
+.contact-header {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+  background-color: $color-primary-dark-1;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  color: #fff;
+  z-index: 20;
+  font-size: 2rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 2.2rem;
+  }
+  
+  
+  display: grid;
+  grid-template-columns: 40rem;
+  grid-template-rows: repeat(3, min-content);
+  grid-gap: 3rem;
+  justify-content: center;
+  align-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+    clip-path: none;
+    background-color: rgba($color-primary-dark-1, .85);
+    grid-column: 1 / -1;
+  }
+  
+  &__location {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.contact-img {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  overflow: hidden;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-column: 1 / -1;
+  }
+}
+
+.contact-icons {
+  width: 1.6rem;
+  height: 1.6rem;
+  
+  
+
+  &:nth-last-child(1) { margin-right: .8rem; }
+}
+
+.contact-details {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 35rem);
+  grid-gap: 8rem;
+  justify-self: center;
+  transform: translateY(-4rem);
+  z-index: 30;
+  
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.9rem;
+  }
+  
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: none;
+    font-size: 2.2rem;
+  }
+
+}
+
+.socials, .business-hours {
+  box-shadow: 0 1.3rem 2rem rgba($color-grey-light-1, .8);
+  padding: 3rem 5rem;
+  background-color: #fff;
+  transition: all .3s;
+
+  &:hover { transform: translateY(-.8rem);}
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    &:not(:last-child) { margin-bottom: 1.4rem;}
+  }
+}
+
+.socials {
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:nth-child(3) svg:nth-child(1) {
+        margin-right: 3px;
+    }
+  }
+}
+
+symbol#instagram,
+symbol#facebook,
+symbol#X,
+symbol#map {fill: currentColor}
+
+symbol#mail {
+  #path-1 {fill: currentColor;}
+  #path-2 {fill: rgba(white, .6);}
+ }

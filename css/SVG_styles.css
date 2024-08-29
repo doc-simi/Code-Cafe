@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 50px;
+}
+
+.icon { 
+  width: 60px;
+ height: 60px;
+ border: 1px solid white;
+}
+
+symbol {border: 1px solid white;}
+
+symbol#cart {
+ #path-1 {fill: red;}
+ #path-2 {fill: purple;}
+}
+
+symbol#facebook {fill: royalblue;}
+
+symbol#instagram {fill: green}
+
+symbol#mail {
+ 
+ #path-1 {fill: brown;}
+ #path-2 {fill: #f40056;}
+}
+
+symbol#map {
+ fill: blue;
+}
+
+symbol#menu {
+ fill: gold;
+}
+
+symbol#phone {
+ fill: red;
+}
+
+symbol#time {
+ #path-1 {fill: darkblue;}
+ #path-2 {fill: white;}
+ #path-3 {fill: brown;}
+}
+
+symbol#whatsapp {
+ fill: green;
+}
+
+symbol#X {
+ fill: #fff;
+}
+
+body {background: #333;}

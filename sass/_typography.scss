@@ -1,0 +1,86 @@
+%heading {
+  font-family: $font-secondary;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 4.5rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5.5rem;
+  }
+}
+
+.heading-2 {
+  @extend %heading;
+  font-size: 4rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 5rem;
+  }
+}
+
+.heading-3 {
+  @extend %heading;
+  font-size: 3rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 4rem;
+  }
+}
+
+.heading-4 {
+  @extend %heading;
+  font-size: 2.1rem;
+  @media only screen and (max-width: $bp-small) {
+    font-size: 3rem;
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-family: $font-secondary;
+  font-weight: 600;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  transition: background-color .2s, transform .4s;
+
+  &--1 {
+    background-color: $color-primary-dark-1;
+    color: #fff;
+
+    &:hover {
+      background-color: $color-primary;
+      transform: translateY(-3px);
+    }
+    
+    &:active {
+      background-color: $color-primary-dark-1;
+      transform: translateY(0);
+    }
+
+  }
+
+  &--2 {
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    background-image: linear-gradient(150deg, transparent 0%, transparent 50%, white 50%);
+    background-size: 250%;
+    transition: all .3s;
+
+    &:hover {
+      background-position: 100%;
+      color: $color-primary-dark-1;
+      transform: translateX(1rem);
+      letter-spacing: .5rem;
+    }
+    
+    &:active {
+      background-position: 0;
+      color: #fff;
+      transform: translateX(0);
+    }
+  }
+}
