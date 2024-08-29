@@ -40,6 +40,10 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+video::-webkit-media-controls {
+  display:none !important;
+}
+
 body {
   font-family: $font-primary;
   color: $color-dark;
